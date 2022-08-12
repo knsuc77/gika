@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>태그탐색</title>
+    <style>
+      div{
+        border: 2px solid black;
+        padding: 10px;
+      }
+    </style>
+    <script>
+      // jQuery는 선택자를 통해 태그를 선택한후 선택된 태그를 기준으로
+      // 다른 태그들을 탐색할수있다
+
+      // 부모태그탐색
+      // parent : 선택된 태그의 부모태그를 선택
+      // parents : 선택된 태그의 모든 부모태그를 선택
+      // parents(선택자2) : 모든 부모태그중 선택자2에 해당하는 태그들이 선택
+      // parentsUntil(선택자2) : 선택된 태그에서 선택자2태그까지 모든 부모태그들이 선택
+
+      // 자식태그탐색
+      // children : 선택된 태그의 자식태그들을 선택
+      // children(선택자2) : 자식태그들중 선택자2에 해당하는 태그들이 선택
+      // find(선택자2) : 선택된 태그의 하위태그들중 선택자2에 해당하는 태그들이 선택
+
+      // 같은계층 태그 탐색
+      // siblings : 선택된 태그와 같은계층의 모든 태그들 선택
+      // siblings(선택자2) : 모든 태그중 선택자2에 해당하는 태그 선택
+      $(function(){
+        $("#a1").parent().css("border-color", "red");
+        $("#a1").parents().css("border-width", "4px");
+        $("#a1").parents(".c1").css("border-style", "dotted");
+        $("#a1").parentsUntil(".c1").css("border-style", "dashed");
+
+        $("#a2").children().css("border-color", "red");
+        $("#a2").children(".c3").css("border-width", "4px");
+        $("#a2").find(".c5").css("border-style", "dotted");
+
+        $("#s1").siblings().css("border-color", "red")
+        $("#s1").siblings(".b2").css("border-style", "dotted")
+      })
+    </script>
+</head>
+<body>
+    <div> 
+      div 태그 1
+      <div class="c1"> 
+        div 태그 2
+        <div class="c2"> 
+          div 태그 3
+          <div id="a1">div 태그 4</div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="a2">
+      div
+      <div class="c3">
+        div 1
+        <div class="c5">
+          div1-1
+        </div>
+      </div>
+      <div class="c4">
+        div 2
+        <div>
+          div2-1
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="b1">div1</div>
+    <div class="b2">div2</div>
+    <div id="s1">div3</div>
+    <div class="b1">div4</div>
+    <div class="b2">div5</div>
+
+    <hr>
+
+    <div>div1</div>
+    <div id="s2">div2</div>
+
+</body>
+</html>

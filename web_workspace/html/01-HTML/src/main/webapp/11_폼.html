@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>폼</title>
+</head>
+<body>
+    <!-- 어떤 처리를 위해 필요한 데이터를 사용자로부터 입력을 받을때 
+    사용할 수 있는 태그-->
+
+    <!-- 사용자가 입력요소에 입력한값을 서버로 전달해야 서버에서
+    처리할수있다 -->
+
+    <!-- action : 요청할 페이지의 주소 -->
+    <!-- method : 요청방식 get, post -->
+    <!-- get : 서버로 전달하는 값이 주소창에 나타나며 길이의 제한이 있다 -->
+    <!-- post : 서버로 전달하는 값이 숨겨지며 길이의 제한이 없다 -->
+
+    <form action="result.html">
+      <!-- 일반적인 버튼이며 javascript로 처리해줘야한다-->
+      <input type="button" value="button"/>
+      <!-- 입력요소의 입력값 초기화 -->
+      <input type="reset" value="reset"/>
+      <!-- form태그의 action속성에 설정되어있는 페이지를 요청 
+      이때 form태그안의 입력요소에 입력한값을 서버로 전달 -->
+      <input type="submit" value="submit"/>
+
+      <hr/>
+      <!-- html5 -->
+      <button type="button">button</button>
+      <button type="reset">reset</button>
+      <button type="submit">submit</button>
+    </form>
+
+    <hr/>
+
+    <!-- name : 이름을 지정해서 값들을 구분할때 사용 -->
+    <!-- value : 사용자가 입력한값을 가지고 있는 속성 -->
+    <!-- readonly : 읽기전용 -->
+    <!-- disabled : 비활성화. 서버로 전달되지 않는다 -->
+    <!-- size : 입력요소의 가로길이(글자수) -->
+    <!-- maxlength : 입력 최대 글자수 -->
+    <!-- autofocus : 페이지가 나타날때 자동으로 포커스를 준다 -->
+    <!-- autocomplete : 자동완성여부 -->
+    <!-- placeholder : 입력요소 안에 안내 문구 -->
+    <!-- required : 필수 입력요소 -->
+    <form action="result.html" method="get">
+      <input type="text" name="a1" value="aaaa" readonly/><br/>
+      <input type="text" name="a2" value="bbbbbb" disabled/><br/>
+      <input type="text" name="a3" size="10"/><br/>
+      <input type="text" name="a4" style="width:100px"/><br/>
+      <input type="text" name="a5" maxlength="5"/><br/>
+      <input type="text" name="a6" autofocus/><br/>
+      <input type="text" name="a7" autocomplete="off"/><br/>
+      <input type="text" name="a8" placeholder="입력하세요"/><br/>
+      <input type="text" name="a8" required/><br/>
+      <input type="reset" value="리셋"/>
+      <input type="submit" value="submit"/>
+    </form>
+
+    <hr/>
+    <!-- label : 항목 이름을 작성할때 -->
+    <!-- for : id를 설정. 여기에 설정되어있는 id에 해당하는 입력요소에 포커스를 준다 -->
+    <form action="result.html" method="post">
+        입력항목1 : <input type="text" name="a9"/><br/>
+        <label for="i1">입력항목2 : </label><input type="text" name="a10" id="i1"/>
+        <button type="submit">확인</button>
+      </form>
+
+</body>
+</html>

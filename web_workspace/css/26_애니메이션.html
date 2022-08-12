@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>애니메이션</title>
+    <style>
+      /* 태그에 변화를 주면서 애니메이션 설정
+      @keyframes : 애니메이션을 설정
+      from : 시작값
+      to : 종료값
+      animation-name : @keyframes로 설정한 애니메이션 이름
+      animation-duration : 애니메이션 동작 시간
+      transition : css가 변경된 부분을 감지하여 애니메이션을 설정 */
+      @keyframes anim {
+        from{
+          background-color: red;
+        }
+        to{
+          background-color: blue;
+        }
+      }
+      @keyframes anim2 {
+        from{
+          background-color: yellow;
+          left : 0px;
+          top : 0px;
+        }
+        to{
+          background-color: green;
+          left: 50px;
+          top: 50px;
+        }
+      }
+      @keyframes anim3{
+        from{
+          background-color: burlywood;
+          left: 0px;
+          top: 0px;
+          width: 200px;
+          height: 200px;
+          opacity: 1;
+        }
+        to{
+          background-color: darkviolet;
+          left: 50px;
+          top: 50px;
+          width: 400px;
+          height: 400px;
+          opacity: 0;
+        }
+      }
+      @keyframes anim4 {
+        from{
+          background-color: aquamarine;
+          opacity: 1;
+        }
+        to{
+          background-color: coral;
+          opacity: 0;
+        }
+      }
+      .c1{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+      .c1:hover{
+        animation-name: anim;
+        animation-duration: 5s;
+      }
+      .c2{
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        position: relative;/*css에서 위치를 이동하려면 설정*/
+      }
+      .c2:hover{
+        animation-name: anim2;
+        animation-duration: 5s;
+      }
+      .c3{
+        width: 200px;
+        height: 200px;
+        background-color: burlywood;
+        position: relative;/*css에서 위치를 이동하려면 설정*/
+      }
+      .c3:hover{
+        animation-name: anim3;
+        animation-duration: 5s;
+      }
+      .c4{
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+        transition: all 5s;/*복원될때*/
+      }
+      .c4:hover{
+        background-color: coral;
+        opacity: 0;
+        transition: all 5s;/*애니메이션 감지*/
+      }
+
+    </style>
+</head>
+<body>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+    <div class="c4"></div>
+</body>
+</html>

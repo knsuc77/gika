@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단위</title>
+    <style>
+      p {
+        border : 1px solid black;
+      }
+      /* 인치 */
+      .c1 {
+        width: 10in;
+      }
+      /* cm */
+      .c2{
+        width: 10cm;
+      }
+      .c3{
+        width: 10mm;
+      }
+      /* pt : 1/72인치 */
+      .c4{
+        width: 10pt;
+      }
+      /* pc : 12/72인치 */
+      .c5{
+        width: 10pc;
+      }
+      .c6{
+        width: 100px;
+      }
+      .c7{
+        width: 10%;
+      }
+      /* 폰트크기에 따라 달라진다. 기본 16px = 1em */
+      .c8{
+        width: 20em;
+      }
+      /* 소문자 x의 높이를 1로 한다 */
+      .c9{
+        width: 100ex;
+      }
+
+    </style>
+</head>
+<body>
+    <!-- css에서 좌표나 크기를 설정할때 단위를 사용한다 -->
+    <!-- 단위를 생략했을 경우 기본으로 px단위로 적용받는다
+    그러나. 이는 브라우저마다 다를수 있다-->
+    <!-- 단위는 절대단위와 상대단위로 나누어진다
+    절대단위 : 해상도가 달라져도 실제크기가 달라지지 않는다
+    상대단위 : 행상도에 따라 실제 크기가 달라진다 -->
+
+    <!-- 절대단위 -->
+    <p class="c1">10 in</p>
+    <p class="c2">10 cm</p>
+    <p class="c3">10 mm</p>
+    <p class="c4">10 pt</p>
+    <p class="c5">10 pc</p>
+
+    <!-- 상대단위 -->
+    <p class="c6">10 px</p>
+    <p class="c7">10 %</p>
+    <p class="c8">10 em</p>
+    <p class="c9">10 ex</p>
+
+</body>
+</html>

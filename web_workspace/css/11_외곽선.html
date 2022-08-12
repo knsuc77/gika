@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>외곽선</title>
+    <style>
+      .c1{
+        /* 외곽선 모양 */
+        border-style: dotted;/*점선*/
+        border-style: dashed;/*실선*/
+        border-style: solid;/*직선 기본값*/
+        border-style: double;/*이중선*/
+        border-style: groove;/*테두리가 파인것*/
+        border-style: ridge;/*테두리가 튀어나온것*/
+        border-style: inset;
+        border-style: outset;
+      }
+      .c2{
+        border-top-style: dotted;
+        border-bottom-style: dashed;
+        border-left-style: solid;
+        border-right-style: double;
+      }
+      .c3{
+        border-style: solid;/*모든 면*/
+        border-style: solid dashed;/*상하, 좌우*/
+        border-style: solid dashed dotted;/*상, 좌우, 하*/
+        border-style: solid dashed dotted double;/* 상부터 시계방향*/
+      }
+      .c4{
+        /* 선색상 */
+        border-style: solid;
+        border-top-color: red;
+        border-bottom-color: blue;
+        border-color: red;
+        border-color: red blue;/*상하, 좌우*/
+        border-color: red blue green;/*상, 좌우, 하*/
+        border-color: red blue green yellow;/* 상부터 시계방향*/
+      }
+      .c5{
+        /* 선 두께 */
+        border-style: solid;
+        border-width: 5px;
+        border-top-width: 5px;
+        border-bottom-width: 10px;
+        border-left-width: 15px;
+        border-right-width: 20px;
+        border-width: 5px 10px;
+        border-width: 5px 10px 15px;
+        border-width: 5px 10px 15px 20px;
+      }
+      .c6{
+        border: solid red 5px;
+      }
+
+      .c7{
+        border: 1px solid red;
+        width: 200px;
+        height: 200px;
+
+        border-top-left-radius: 20px;
+        border-radius: 20px;
+      }
+    </style>
+</head>
+<body>
+    <p class="c1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p class="c2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p class="c3">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p class="c4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p class="c5">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p class="c6">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <div class="c7"></div>
+    <div class="c8"></div>
+    <div class="c9"></div>
+</body>
+</html>

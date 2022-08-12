@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>filter</title>
+    <style>
+      /* filter : 태그에 대해 효과를 줄 수 있는 css 속성 */
+      .c1{
+        /* 흐림 효과 */
+        filter:blur(3px); 
+      }
+      .c2{
+        /* 밝기 */
+        filter:brightness(3);
+      }
+      .c3{
+        /* 명암비 */
+        filter:contrast(200%);
+      }
+      .c4{
+        /* 그림자 */
+        filter:drop-shadow(10px 10px 5px red);
+      }
+      .c5{
+        /* 회색필터 */
+        filter:grayscale(100%);
+      }
+      .c6{
+        /* 색 반전 */
+        filter:invert(100%);
+      }
+      .c7{
+        /* 투명도 */
+        filter:opacity(10%);
+      }
+      .c8{
+        /* 갈색 효과 */
+        filter: sepia(80%);
+      }
+      .c9{
+        /* 채도 */
+        filter:saturate(50%);
+        /* 색조 */
+        filter:hue-rotate(270deg);
+      }
+      .c10{
+        /* 여러 효과를 한꺼번에 */
+        filter: blur(5px) opacity(0.5) sepia(80%);
+      }
+    </style>
+</head>
+<body>
+    <img src="Image/item3.png"/>
+    <img src="Image/item3.png" class="c1"/>
+    <img src="Image/item3.png" class="c2"/>
+    <img src="Image/item3.png" class="c3"/>
+    <img src="Image/item3.png" class="c4"/>
+    <img src="Image/item3.png" class="c5"/>
+    <img src="Image/item3.png" class="c6"/>
+    <img src="Image/item3.png" class="c7"/>
+    <img src="Image/item3.png" class="c8"/>
+    <img src="Image/item3.png" class="c9"/>
+    <img src="Image/item3.png" class="c10"/>
+</body>
+</html>

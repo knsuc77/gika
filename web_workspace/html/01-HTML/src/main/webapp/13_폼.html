@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>폼</title>
+</head>
+<body>
+    <!-- list 입력요소에 자동완성을 위한 문자열을 설정해줄때 사용 
+    datalist 태그를 이용해 리스트를 만들어 주고
+    text에 리스트를 제공 -->
+    <form action="result.html" method="post">
+      <input type="text" name="a1" list="list1"/>
+        <datalist id="list1">
+          <option value="aaa">항목1</option>
+          <option value="bbb">항목2</option>
+          <option value="ccc">항목3</option>
+          <option value="ddd">항목4</option>
+          <option value="eee">항목5</option>
+        </datalist>
+      <button type="submit">확인</button>
+    </form>
+
+      <hr/>
+
+      <form action="result.html" method="get" id="f1">
+        <input type="text" name="a2"/>
+
+        <button type="submit">확인</button>
+        <!-- formaction 버튼을 눌렀을때 요청할 파일의 주소를 작성-->
+        <button type="submit" formaction="test.html">확인2</button>
+      </form>
+
+      <input type="text" name="a3" form="f1"/>
+
+    </form>
+</body>
+</html>

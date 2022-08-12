@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>가상클래스</title>
+    <style>
+      /* 가상클래스 : 태그의 상태에 따라 태그를 선택할수 있도록 하는 개념*/
+      /* 선택자:상태 */
+      .c1:hover{
+        border: 1px solid blue;
+      }
+      .c1:active{
+        border: 1px solid red;
+      }
+      .c2{
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+      }
+      .c2:hover{
+        background-color: red;
+      }
+      .c2:active{
+        background-color: green;
+      }
+      .c3:focus{
+        background-color: yellow;
+      }
+      /* 처음것만 적용 */
+      .c4 > li:first-child{
+        color: red;
+      }
+      .c4 > li:last-child{
+        color: yellow;
+      }
+      .c4 > li:nth-child(3){
+        color: orange;
+      }
+
+      /* 랭귀지 */
+      p:lang(ko){
+        color: red;
+      }
+      p:lang(en){
+        color: blue;
+      }
+
+      /* 가상요소 : 태그의 일부분을 선택 */
+      /* 첫줄 */
+      .c5::first-line{
+        color: red;
+      }
+      /* 첫글자 */
+      .c5::first-letter{
+        font-size: 50px;
+      }
+      .c6::before{
+        /* 속성값에 텍스트나 이미지등을 화면에 출력 */
+        content: url(Image/bmw.png);
+      }
+      .c6::after{
+        content: url(Image/bmw.png);
+      }
+
+    </style>
+</head>
+<body>
+    <img src="Image/bmw.png" class="c1"/><br/>
+    <div class="c2"></div>
+    <input type="text" class="c3"/><br/>
+    <ul class="c4">
+      <li>항목1</li>
+      <li>항목2</li>
+      <li>항목3</li>
+      <li>항목4</li>
+      <li>항목5</li>
+    </ul>
+    <br/>
+    <p lang="ko">한국어</p>
+    <p lang="en">english</p>
+    <p class="c5">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p class="c6">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    
+    
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>

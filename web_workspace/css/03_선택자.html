@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>선택자 조합</title>
+    <style>
+      p {
+        background-color: blue;
+      }
+      /* 선택자1선택자2 : 기본선택자 여러개를 붙혀서 만든 선택자 */
+      p.c1 {
+        color: red;
+      }
+
+      div.c2 {
+        color: yellow;
+      }
+
+      /* 선택자1 선택자2 : 선택자1 태그를 선택하고 내부에 있는 
+      선택자2에 해당하는 태그를 선택한다 */
+      /* #a1 p {
+        color: green;
+      } */
+
+      /* 선택자1 > 선택자2 : 선택자1 태그를 선택하고 하위에 있는
+      선택자2에 해당하는 태그를 선택한다*/
+      #a1 > p {
+        color: green;
+      }
+
+      /* 선택자1, 선택자2 : 선택자1이거나 선택자2에 해당하는 태그를 모두 선택*/
+      .c3, .c4, .c5 {
+        color: white;
+        background-color: black;
+      }
+
+    </style>
+</head>
+<body>
+    <p class="c1">p 태그 1</p>
+    <p class="c2">p 태그 2</p>
+    <div class="c1">div 태그 1</div>
+    <div class="c2">div 태그 2</div>
+
+    <div id="a1">
+      <div>
+        <p>div내부의 div내부의 p태그</p>
+      </div>
+      <p>div 내부의 p태그</p>
+    </div>
+
+    <p class="c3">p 태그 3</p>
+    <p class="c4">p 태그 4</p>
+    <p class="c5">p 태그 5</p>
+
+</body>
+</html>

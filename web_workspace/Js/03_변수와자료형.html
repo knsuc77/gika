@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>변수와자료형</title>
+</head>
+<body>
+    <script>
+      // 자료형
+      document.write("정수 : " + 123 + "<br/>");
+      document.write("실수 : " + 12.34 + "<br/>");
+      document.write("문자열 : " + "Hello" + "<br/>");
+      document.write("문자열 : " + 'World' + "<br/>");
+      document.write("참 : " + true + "<br/>");
+      document.write("거짓 : " + false + "<br/>");
+      document.write("이름은 '홍길동' 입니다<br/>");
+      document.write('이름은 "홍길동" 입니다<br/>');
+
+      // 변수
+      var a1 = 100;
+      var a2 = 12.34;
+      var a3 = "문자열";
+      var a4 = true;
+      var a5;//변수를 선언하고 값을 대입하지않으면 undefined 값이 자동으로 대입
+
+      var a1 = "문자열";
+
+      document.write("a1 : " + a1 + "<br/>");
+      document.write("a2 : " + a2 + "<br/>");
+      document.write("a3 : " + a3 + "<br/>");
+      document.write("a4 : " + a4 + "<br/>");
+      document.write("a5 : " + a5 + "<br/>");
+
+      // 변수 var, let, const
+      // var 중복선언 가능
+      var a = 10;
+      document.write(a + "<br/>");
+      var a = 100;
+      document.write(a + "<br/>");
+
+      // let, const 중복선언 불가능
+      let b = 10;
+      document.write(b + "<br/>");
+      b = 100;
+
+      // const(상수)
+      const c = 200;
+      document.write(c + "<br/>");
+      //c = 20;//오류
+
+      // var, let 변수에 재할당이 가능
+      // const는 상수이기 때문에 재할당 불가능
+
+      // 변수 범위
+      // var는 함수내부에서는 지역변수, 나머지는 전역변수
+      function hello() {
+        var d = 10;
+        let f = 50;
+        document.write(d + "<br/>");
+      }
+
+      if(true){
+        // var는 함수를 제외한 영역에서는 전역변수로 취급된다
+        var e = 300;
+        let g = 500;
+      }
+
+      hello();
+
+      document.write(e + "<br/>");
+      // document.write(f + "<br/>");//오류
+      // document.write(g + "<br/>");//오류
+
+      // 변수 호이스팅
+      document.write(h + "<br/>");
+      var h = 900;
+      document.write(h + "<br/>");
+
+
+    </script>
+</body>
+</html>

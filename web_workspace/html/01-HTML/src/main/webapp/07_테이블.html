@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>테이블</title>
+</head>
+<body>
+
+  <table border="1" style="width:200px">
+    <tr><!-- 행 -->
+      <td>1-1</td><!-- 열 -->
+      <td>1-2</td>
+      <td>1-3</td>
+    </tr>
+    <tr>
+      <td>2-1</td>
+      <td>2-2</td>
+      <td>2-3</td>
+    </tr>
+  </table>
+
+<hr/>
+
+<!-- 테이블 전체칸의 개수는 td 태그 개수가 가장 맣은 줄의 칸으로 결정 -->
+  <table border="1" style="width:200px">
+    <tr>
+      <td>1-1</td>
+    </tr>
+    <tr>
+      <td>2-1</td>
+      <td>2-2</td>
+    </tr>
+    <tr>
+      <td>3-1</td>
+      <td>3-2</td>
+      <td>3-3</td>
+    </tr>
+  </table>
+
+  <hr/>
+
+  <!-- th : 각 칸에 타이틀을 주고 싶을때 -->
+  <!-- cellpadding : 칸 내부의 여백 -->
+  <!-- cellspacing : 각 칸의 공간 크기 -->
+  <table border="1" style="width:200px" cellpadding="10" cellspacing="1">
+    <tr>
+      <th>칸1</th>
+      <th>칸2</th>
+      <th>칸3</th>
+    </tr>
+    <tr>
+      <td>1-1</td>
+      <td>1-2</td>
+      <td>1-3</td>
+    </tr>
+    <tr>
+      <td>2-1</td>
+      <td>2-2</td>
+      <td>2-3</td>
+    </tr>
+  </table>
+
+<hr/>
+
+<!-- 칸/줄 차지하기 -->
+<!-- colspan : 정해진 개수만큼 칸을 차지 -->
+<table border="1" style="width:200px">
+  <tr>
+    <td colspan="2">1-1</td>
+  </tr>
+  <tr>
+    <td>2-1</td>
+    <td>2-2</td>
+  </tr>
+</table>
+
+<hr/>
+<!-- rowspan : 정해진 개수만큼 줄을 차지 -->
+<table border="1" style="width:200px">
+  <tr>
+    <td rowspan="2">1-1</td>
+    <td>1-2</td>
+  </tr>
+  <tr>
+    <td>2-2</td>
+  </tr>
+</table>
+
+<hr/>
+
+<table border="1" style="width:200px">
+  <tr>
+    <td>1-1</td>
+    <td>1-2</td>
+    <td>1-3</td>
+  </tr>
+  <tr>
+    <td colspan="2">2-1</td>
+    <td rowspan="2">2-2</td>
+  </tr>
+  <tr>
+    <td>3-1</td>
+    <td>3-2</td>
+  </tr>
+</table>
+
+<!-- 테이블 영역 -->
+<!-- 
+caption : 테이블의 타이틀
+thead : 각 칸의 제목
+tbody : 테이블 몸체
+tfoot : 테이블 푸터 -->
+
+<table border="1" style="width:200px">
+  <tfoot>
+    <td colspan="3">footer</td>
+  </tfoot>
+
+  <tbody>
+    <tr>
+      <td>1-1</td>
+      <td>1-2</td>
+      <td>1-3</td>
+    </tr>
+    <tr>
+      <td>2-1</td>
+      <td>2-2</td>
+      <td>2-3</td>
+    </tr>
+  </tbody>
+
+  <caption>테이블의 타이틀</caption>
+
+  <thead>
+    <tr>
+      <th>칸1</th>
+      <th>칸2</th>
+      <th>칸3</th>
+    </tr>
+  </thead>
+</table>
+
+
+</body>
+</html>

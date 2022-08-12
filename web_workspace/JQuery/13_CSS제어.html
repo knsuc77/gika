@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>CSS제어</title>
+    <style>
+      .c1{
+        background-color: black;
+        color: white;
+      }
+      /* #a1{
+        background-color: white;
+        color: black;
+      } */
+    </style>
+    <script>
+      // addClass : css class를 설정
+      // removeClass : css class를 제거
+      // toggleClass : 지정된 클래스가 없으면 설정하고 있으면 제거한다
+      // css : css 속성을 가져오거나 설정
+
+      function addclass(){
+        $("#a1").addClass("c1");
+      }
+
+      function removeclass(){
+        $("#a1").removeClass("c1");
+      }
+
+      function toggleclass(){
+        $("#a1").toggleClass("c1");
+      }
+
+      function get_css(){
+        var bg = $("#a1").css("background-color");
+        var c = $("#a1").css("color");
+
+        $("#result").append("background-color : " + bg + "<br>");
+        $("#result").append("color : " + c + "<br>");
+      }
+
+      function set_css(){
+        $("#a1").css("background-color", "yellow");
+        $("#a1").css("color", "blue");
+      }
+
+    </script>
+</head>
+<body>
+    <h1 id="a1">h1 태그</h1>
+    <div id="result"></div>
+    <button onclick="addclass()">css 클래스 추가</button>
+    <button onclick="removeclass()">css 클래스 제거</button>
+    <button onclick="toggleclass()">css 클래스 전환</button>
+    <button onclick="get_css()">css 가져오기</button>
+    <button onclick="set_css()">css 설정하기</button>
+</body>
+</html>

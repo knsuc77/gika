@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>기본문법</title>
+</head>
+<body>
+    <!-- 출력문 -->
+    <div id="a1"></div>
+
+    <script>
+      // innerHTML : 태그내부에 html코드를 삽입하는 방식
+      document.getElementById("a1").innerHTML = "HTML 코드 삽입";
+
+      // write : 지정한 문자열을 html 코드로 출력하는 함수
+      document.write("HTML 코드 출력<br/>");
+
+      // alert 함수
+      alert("웹브라우저에 경고창을 띄우는 함수");
+
+      // 웹브라우저에서 제공하는 콘솔에 출력하는 함수
+      console.log("로그 메시지 출력");
+
+      // 여러라인의 코드를 한번에 작성할 경우 반드시 세미콜론 붙혀줘야 한다
+      document.write("세미콜론<br/>"); document.write("세미콜론<br/>");
+
+      // 대소문자 구분
+      document.write("테스트 출력");
+      Document.write("테스트 출력");
+
+      // 단일 주석
+      /* 여러줄 주석 */
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Form태그선택자</title>
+    <script>
+      //form태그 내부의 입력에 관련된 태그들에 대한 선택자
+      // :input : 모든 입력에 관련된 태그들을 선택
+      // :text : type속성이 text인 input태그를 선택
+      // :password : type속성이 password인 input태그를 선택
+      // :radio
+      // :checkbox
+      // :button
+      // :submit
+      // :reset
+      // :image
+      // :file
+
+      // :enabled : 활성상태인 input태그가 선택
+      // :disabled : 비활성상태인 input태그가 선택
+      // :selected : select태그 내의 option태그중에 현재 선택되어있는 태그 선택
+      // :checked : radio나 checkbox에서 현재 check되어있는 태그 선택
+      $(function(){
+        // $(":input").css("background-color", "yellow");
+        // $(":text").css("background-color", "red");
+        // $(":password").css("background-color", "green");
+        
+        $(":enabled").css("background-color", "yellow");
+        $(":disabled").css("background-color", "red");
+      })
+    </script>
+</head>
+<body>
+    <input type="text"><br>
+    <input type="password"><br>
+    <input type="number" disabled>
+</body>
+</html>

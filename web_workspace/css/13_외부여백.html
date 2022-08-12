@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>외부여백</title>
+    <style>
+      .c1{
+        border: 1px solid red;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .c2{
+        border: 1px solid red;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin: 50px;/*모든 면*/
+        margin: 50px 100px;/*상하, 좌우*/
+        margin: 50px 100px 150px;/*상, 좌우, 하*/
+        margin: 50px 100px 150px 200px;/*시계방향*/
+      }
+    </style>
+</head>
+<body>
+    <!-- margin : 태그간 여백 설정 -->
+    <img src="Image/bmw.png"/><br/>
+    <img src="Image/bmw.png" class="c1"/><br/>
+    <img src="Image/bmw.png"/>
+    <hr/>
+    <img src="Image/bmw.png"/>
+    <img src="Image/bmw.png" class="c2"/>
+    <img src="Image/bmw.png"/>
+</body>
+</html>

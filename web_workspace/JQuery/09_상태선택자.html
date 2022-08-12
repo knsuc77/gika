@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>상태선택자</title>
+    <script>
+      // 태그의 상태에 따라 선택하는 선택자
+      // :header : h1~h6 태그를 선택
+      // :focus : 현재 포커스가 주어진 태그를 선택
+      // :contains(문자열) : 지정된 문자열이 포함되어있는 태그를 선택
+      // :has(선택자) : 지정된 선택자를 포함하고 있는 태그를 선택
+      $(function(){
+        $(":header").css("background-color", "yellow");
+        $(":focus").css("background-color", "orange");
+        $("div:contains('Hello')").css("color", "red");
+        $("div:has(p)").css("background-color", "green");
+      })
+    </script>
+</head>
+<body>
+    <p>p 태그</p>
+    <h1>h1 태그</h1>
+    <h3>h3 태그</h3>
+<hr>
+    <input type="text"><br>
+    <input type="text" autofocus>
+<hr>
+    <div>Hello World</div>
+    <div>jQuery World</div>
+    <div>Hello World</div>
+<hr>
+<div>
+  <p>div 안에 p 태그</p>
+</div>
+<div>
+  <div>div 안에 div 태그</div>
+</div>
+
+</body>
+</html>

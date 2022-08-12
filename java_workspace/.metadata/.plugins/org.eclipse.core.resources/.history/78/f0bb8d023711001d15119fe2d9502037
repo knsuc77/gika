@@ -1,0 +1,28 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+
+public class MainClass {
+	static final String driver = "oracle.jdbc.OracleDriver";
+	static final String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	static final String id = "test";
+	static final String pw = "1234";
+	
+	public static void main(String[] args){
+		try {
+			addData();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	public static void addData() throws Exception  {
+		
+		// JDBC 드라이브 로딩
+		Class.forName(driver);
+		
+		// 오라클 접속
+		Connection db = DriverManager.getConnection(url, id, pw);
+		
+	}	
+}

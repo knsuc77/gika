@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>배경</title>
+    <style>
+      p {
+        width: 100%;
+        height: 200px;
+        border: 1px solid black;
+      }
+      .c1{
+        /* 배경색 */
+        background-color: yellow;
+      }
+      .c2{
+        /* 배경이미지 */
+        /* url : 외부 리소스를 가져온다 */
+        background-image: url(Image/bmw.png);
+      }
+      .c3{
+        background-image: url(Image/bmw.png);
+        /* 배경이미지 반복여부 */
+        background-repeat: repeat; /* 기본 */
+        background-repeat: repeat-x;/*가로 반복*/
+        background-repeat: repeat-y;/*세로 반복*/
+        background-repeat: no-repeat;/*반복 안함*/
+        background-repeat: space;/*이미지에 맞춰서 반복*/
+        background-repeat: round;/*이미지가 짤리지 않게 확대축소*/
+      }
+      .c4{
+        background-image: url(Image/bmw.png);
+        /* 배경 이미지 위치 */
+        background-position: 100px 50px;
+      }
+      .c5{
+        background-image: url(Image/bmw.png);
+        background-repeat: no-repeat;
+        /* 스크롤 여부 */
+        background-attachment: scroll;/*기본*/
+        background-attachment: fixed;/*브라우저 상단에 고정*/
+        background-attachment: local;/*내부에서 스크롤*/
+        overflow: scroll;
+      }
+      .c6{
+        background: url(Image/bmw.png) no-repeat 100px 50px scroll;
+      }
+    </style>
+</head>
+<body>
+    <p class="c1">p 태그 1</p>
+    <p class="c2">p 태그 2</p>
+    <p class="c3">p 태그 3</p>
+    <p class="c4">p 태그 4</p>
+    <p class="c5">p 태그 5
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </p>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <p class="c6">p 태그 6</p>
+</body>
+</html>

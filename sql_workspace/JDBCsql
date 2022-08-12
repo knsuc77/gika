@@ -1,0 +1,11 @@
+create table test_table
+(
+    f_idx number constraint TEST_TABLE_F_IDX_PK primary key,
+    f_num number not null,
+    f_str varchar2(50) not null
+);
+
+create sequence test_seq
+start with 1
+increment by 1
+minvalue 1;

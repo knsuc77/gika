@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>리스트</title>
+    <style>
+      .c1{
+        list-style-type: disc;
+        list-style-type: none;
+        list-style-type: circle;
+        list-style-type: square;
+        /* 항목의 위치 */
+        list-style-position: outside;
+      }
+      .c2{
+        list-style-type: decimal;/*기본*/
+        list-style-type: decimal-leading-zero;/*0이 붙어나옴*/
+        list-style-type: lower-alpha;
+        list-style-type: upper-alpha;
+        list-style-type: lower-greek;/*그리스 숫자*/
+        list-style-type: lower-latin;
+        list-style-type: lower-roman;
+        list-style-type: hebrew;
+        list-style-type: hiragana;/*일본어*/
+        list-style-type: katakana;
+        list-style-type: cjk-ideographic;/*한자*/
+        list-style-type: armenian;
+
+        list-style-position: inside;
+      }
+      .c3{
+        /* 인덱스대신 이미지로 표시 */
+        list-style-image: url(Image/SmallLogo.scale-100.png);
+      }
+      .c4{
+        list-style: square inside;
+      }
+    </style>
+</head>
+<body>
+    <ul class="c1">
+      <li>항목1</li>
+      <li>항목2</li>
+      <li>항목3</li>
+      <li>항목4</li>
+      <li>항목5</li>
+    </ul>
+    <hr/>
+    <ol class="c2">
+      <li>항목1</li>
+      <li>항목2</li>
+      <li>항목3</li>
+      <li>항목4</li>
+      <li>항목5</li>
+    </ol>
+    <hr/>
+    <ul class="c3">
+      <li>항목1</li>
+      <li>항목2</li>
+      <li>항목3</li>
+      <li>항목4</li>
+      <li>항목5</li>
+    </ul>
+    <hr/>
+    <ul class="c4">
+      <li>항목1</li>
+      <li>항목2</li>
+      <li>항목3</li>
+      <li>항목4</li>
+      <li>항목5</li>
+    </ul>
+
+</body>
+</html>

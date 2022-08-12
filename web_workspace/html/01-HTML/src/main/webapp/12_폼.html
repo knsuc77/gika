@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>폼</title>
+</head>
+<body>
+    <form action="result.html" method="get">
+        <!-- text : 한줄짜리 문자열 입력 요소 -->
+        <input type="text" name="a1"/><br/>
+        <!-- password 입력한 내용이 화면에 보이지 않으며, 
+          자동완성기능이 비활성화 -->
+        <input type="password" name="a2"/><br/>
+        <!-- textarea 여러줄 문자열 입력요소 
+        rows : 줄수(높이) cols : 줄당 문자수(길이)
+        style="resize:none" : 사이즈 조절 금지-->
+        <textarea name="a3" rows="5" cols="30"></textarea><br/>
+        <textarea name="a4" style="width:200px; height:50px; resize:none"></textarea><br/>
+        <!-- checkbox 제시되는 항목들중 여러개를 고르는 입력요소 
+         checked 화면이 나타날때 체크여부 설정-->
+        <fieldset style="width: 200px"><!-- 그룹 -->
+        <legend>체크박스 제목</legend>
+        <input type="checkbox" name="a5" value="1"/>체크박스1<br/>
+        <input type="checkbox" name="a5" value="2" checked/>체크박스2<br/>
+        <input type="checkbox" name="a5" value="3"/>체크박스3<br/>
+        </fieldset>
+
+        <!-- radio 제시되는 항목들중 한개만 고를수있는 입력요소 -->
+        <fieldset style="width:200px">
+        <legend>라디오 제목</legend>
+        <input type="radio" name="a6" value="1"/>라디오1<br/>
+        <input type="radio" name="a6" value="2" checked/>라디오2<br/>
+        <input type="radio" name="a6" value="3"/>라디오3<br/>
+        </fieldset>
+
+        <!-- select 항목들을 드롭다운 형태로 표시
+        selected 페이지가 보여질때 선택되어 있는 항목을 설정
+        multiple 여러개의 항목을 선택할수 있다 -->
+        <select name="a7" multiple>
+            <option value="1">항목1</option>
+            <option value="2">항목2</option>
+            <option value="3" selected>항목3</option>
+            <option value="4">항목4</option>
+            <option value="5" selected>항목5</option>
+        </select><br/>
+
+        <!-- file 컴퓨터에 있는 파일을 선택할수있는 입력요소 
+        accept : 선택할수있는 파일의 타입을 설정 
+        MIME type : image/*, audio/*, video/* -->
+        <input type="file" name="a8" accept="image/png"/><br/>
+
+        <!-- hidden 화면상에 나타나지 않는 입력요소 -->
+        <input type="hidden" name="a9" value="aaaa"/><br/>
+
+        <!-- search 검색어 입력을 위한 입력요소 -->
+        <input type="search" name="a10"/><br/>
+        
+        <!-- number 숫자 입력 요소 
+        max 최대값, min 최소값, step 배수-->
+        <input type="number" name="a11"/><br/>
+        <input type="number" name="a12" max="100" min="0" step="2"/><br/>
+
+        <!-- range 바를 이용해 숫자를 입력 -->
+        <input type="range" name="a13" max="100" min="0" step="2"/><br/>
+
+        <!-- email -->
+        <input type="email" name="a14"/><br/>
+
+        <!-- url -->
+        <input type="url" name="a15"/><br/>
+
+        <!-- 날짜와시간 -->
+        <input type="datetime-local" name="a16"/><br/>
+        <input type="date" name="a17"/><br/>
+        <input type="month" name="a18"/><br/>
+        <input type="week" name="a19"/><br/>
+        <input type="time" name="a20"/><br/>
+
+        <!-- color -->
+        <input type="color" name="a21"/><br/>
+
+        <!-- tel 모바일에서 전화번호 입력 키보드 지원-->
+        <input type="tel" name="a22"/><br/>
+
+        <button type="submit">확인</button>
+    </form>
+
+</body>
+</html>

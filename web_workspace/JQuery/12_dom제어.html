@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>DOM제어</title>
+    <script>
+      // text : 태그사이의 문자열을 제어
+      // html : 태그내부의 html을 제어
+      // val : 입력도구들의 value속성값을 제어
+      // attr : 태그의 속성을 제어
+
+      // append : html코드나 태그를 태그내부의 뒤에 추가
+      // prepend : html코드나 태그를 태그내부의 앞에 추가
+
+      // after : html코드나 태그를 태그외부의 다음에 추가
+      // before : html코드나 태그를 태그외부의 앞에 추가
+
+      // remove : 태그를 제거
+      // empty ; 태그내의 모든 태그를 제거
+
+      function get_a1(){
+        var str = $("#a1").text();
+        alert(str);
+      }
+
+      function get_a2(){
+        var str = $("#a2").text();
+        alert(str);
+      }
+
+      function set_a3(){
+        $("#a3").text("문자열 설정");
+      }
+
+      function set_a3Html(){
+        $("#a3").text("<a href='http://apple.co.kr'>apple</a>");
+      }
+
+      function get_a4html(){
+        var str = $("#a4").html();
+        alert(str);
+      }
+
+      function set_a4html(){
+        $("#a4").html("<a href='http://google.co.kr'>google</a>");
+      }
+
+      function get_a5(){
+        var str = $("#a5").val();
+        alert(str);
+      }
+
+      function set_a5(){
+        $("#a5").val("123456789");
+      }
+
+      function get_a6(){
+        var src = $("#a6").attr("src");
+        var width = $("#a6").attr("width");
+        var height = $("#a6").attr("height");
+        var id = $("#a6").attr("id");
+
+        $("#result").html("src : " + src + "<br>"
+                        + "width : " + width + "<br>"
+                        + "height : " + height + "<br>"
+                        + "id : " + id + "<br>");
+      }
+
+      function set_a6(){
+        $("#a6").attr("width", 200);
+        $("#a6").attr("height", 50);
+      }
+
+      var i = 0;
+
+      function append1(){
+        $("#a7").append("<p>추가되는 p 태그</p>");
+      }
+
+      function append2(){
+        i++;
+        var p = $("<p>");
+        p.text("추가되는 p 태그" + i);
+        $("#a7").append(p);
+      }
+
+      function prepend1(){
+        $("#a7").prepend("<p>추가되는 p 태그</p>");
+      }
+
+      function prepend2(){
+        i++;
+        var p = $("<p>");
+        p.text("추가되는 p 태그" + i);
+        $("#a7").prepend(p);
+      }
+      
+      function after1(){
+        $("#a7").after("<p>after 추가되는 p태그</p>")
+      }
+
+      function after2(){
+        var p = $("<p>");
+        p.text("추가되는 p 태그");
+        $("#a7").after(p);
+      }
+
+      function before1(){
+        $("#a7").before("<p>after 추가되는 p태그</p>")
+      }
+
+      function before2(){
+        var p = $("<p>");
+        p.text("추가되는 p 태그");
+        $("#a7").before(p);
+      }
+
+      function remove_a9(){
+        $("#a9").remove();
+      }
+
+      function empty_a8(){
+        $("#a8").empty();
+      }
+
+    </script>
+    <style>
+      #a7, #a8{
+        border : 1px solid black;
+      }
+    </style>
+</head>
+<body>
+    <h3 id="a1">a1 문자열</h3>
+    <button onclick="get_a1()">a1문자열가져오기</button>
+    <hr>
+    <div id="a2">
+      <a href="http://google.com">google</a>
+    </div>
+    <button onclick="get_a2()">a2문자열가져오기</button>
+    <hr>
+    <div id="a3"></div>
+    <button onclick="set_a3()">a3문자열설정하기</button>
+    <button onclick="set_a3Html()">a3 Html 설정하기</button>
+    <hr>
+    <div id="a4">
+      <a href="http://apple.co.kr">apple</a>
+    </div>
+    <button onclick="get_a4html()">a4 Html 가져오기</button>
+    <button onclick="set_a4html()">a4 Html 설정하기</button>
+    <hr>
+    <input type="text" id="a5"><br>
+    <button onclick="get_a5()">a5 value 가져오기</button>
+    <button onclick="set_a5()">a5 value 설정하기</button>
+    <hr>
+    <img src="https://jquery.com/jquery-wp-content/themes/jquery/content/donate.png" width="400px" height="100px" id="a6">
+    <div id="result"></div>
+    <button onclick="get_a6()">a6 attr 가져오기</button>
+    <button onclick="set_a6()">a6 attr 설정하기</button>
+    <hr>
+    <div id="a7">
+      <p>p 태그</p>
+    </div>
+    <button onclick="append1()">html 코드를 뒤에 추가</button>
+    <button onclick="append2()">html 객체를 뒤에 추가</button>
+    <button onclick="prepend1()">html 코드를 앞에 추가</button>
+    <button onclick="prepend2()">html 객체를 앞에 추가</button><br>
+    <button onclick="after1()">html 코드를 외부 뒤에 추가</button>
+    <button onclick="after2()">html 코드를 외부 뒤에 추가</button>
+    <button onclick="before1()">html 코드를 외부 앞에 추가</button>
+    <button onclick="before2()">html 코드를 외부 앞에 추가</button>
+    <hr>
+    <div id="a8">
+      <p>p태그</p>
+      <p id="a9">a9 p태그</p>
+      <p>p태그</p>
+    </div>
+    <button onclick="remove_a9()">a9 제거</button>
+    <button onclick="empty_a8()">a8 내부 모든태그 제거</button>
+</body>
+</html>
