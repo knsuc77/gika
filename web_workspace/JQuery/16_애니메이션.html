@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>애니메이션</title>
+    <style>
+      #a1{
+        border: 1px solid black;
+        background-color: yellow;
+        width: 200px;
+        height: 200px;
+        position: relative;
+      }
+    </style>
+    <script>
+      // 선택된 태그에 css값을 새롭게 설정해 주면 중간의 애니메이션을
+      // 만들어주고 태그에 변화를 준다
+      
+      function set_size(){
+        $("#a1").animate({
+          width : 400,
+          height : 400
+        },"slow");
+      }
+      function set_opacity(){
+        $("#a1").animate({
+          opacity : 0
+        },"slow");
+      }
+      function set_postion(){
+        $("#a1").animate({
+          left : 100,
+          top : 100
+        },"slow");
+      }
+      // jQuery UI 라이브러리에서 추가로 제공
+      function set_bgcolor(){
+        $("#a1").animate({
+          backgroundColor : "red"
+        },"slow");
+      }
+      function set_Total(){
+        $("#a1").animate({
+          width : 400,
+          height : 400,
+          opacity : 0,
+          left : 100,
+          top : 100
+        }, "slow");
+      }
+      function set_sequence(){
+        $("#a1").animate({
+          width : 400,
+          height : 400
+        },"slow").delay(1000).animate({
+          left : 100,
+          top : 100
+        },"slow").delay(1000).animate({
+          opacity : 0
+        },"slow");
+      }
+    </script>
+</head>
+<body>
+    <div id="a1"></div>
+    <button onclick="set_size()">size 설정</button>
+    <button onclick="set_opacity()">투명도</button>
+    <button onclick="set_postion()">위치이동</button>
+    <button onclick="set_bgcolor()">배경색설정</button>
+    <button onclick="set_Total()">종합설정</button>
+    <button onclick="set_sequence()">순차설정</button>
+</body>
+</html>
+
+<!-- Ajax 
+-->

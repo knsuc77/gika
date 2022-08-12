@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>jQuery효과</title>
+    <style>
+      #a1{
+        border: 1px solid black;
+        background-color: yellow;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+    <script>
+      // hide : 선택된 태그를 사라지게 한다
+      // show : 선택된 태그를 나타나게 한다
+      // toggle : 사라지거나 나타나는 상태를 전환
+      // fadeIn : 페이드효과를 통해 나타나게 한다
+      // fadeOut : 페이드효과를 통해 사라지게 한다
+      // fadeToggle : 페이드효과를 통해 전환
+      // fadeTo : 지정된 투명도 만큼 페이드아웃한다
+      // slideUp : 위로 슬라이드 되면서 사라진다
+      // slideDown : 아래로 슬라이드 되면서 나타난다
+      // slideToggle : 슬라이드효과를 통해 사라지거나 나타나는 상태 전환
+
+      // callback 함수
+      // 효과가 종료되면 자동으로 호출되는 함수를 등록할 수 있다
+
+      function div_hide(){
+        //$("#a1").hide();
+        //$("#a1").hide(1000);//지정된 시간만큼 애니메이션 효과
+        //$("#a1").hide("slow");
+        $("#a1").hide("fast");
+      }
+      function div_show(){
+        //$("#a1").show();
+        //$("#a1").show(1000);
+        //$("#a1").show("slow");
+        $("#a1").show("fast");
+      }
+
+      function div_toggle(){
+        //$("#a1").toggle();
+        //$("#a1").toggle(1000);
+        //$("#a1").toggle("slow");
+        $("#a1").toggle("fast");
+      }
+      function div_fadeout(){
+        $("#a1").fadeOut("slow");
+      }
+      function div_fadein(){
+        $("#a1").fadeIn("slow");
+      }
+      function div_fadetoggle(){
+        $("#a1").fadeToggle("slow");
+      }
+      function div_fadeto(){
+        $("#a1").fadeTo("slow", 0.5);
+      }
+      function div_slideup(){
+        $("#a1").slideUp("slow");
+      }
+      function div_slidedown(){
+        $("#a1").slideDown("slow");
+      }
+      function div_slidetoggle(){
+        $("#a1").slideToggle("slow");
+      }
+
+      function test_callback(){
+        $("#a1").toggle("slow", function(){
+          alert("effect end");
+        });
+      }
+    </script>
+</head>
+<body>
+    <div id="a1"></div>
+    <button onclick="div_hide()">hide</button>
+    <button onclick="div_show()">show</button>
+    <button onclick="div_toggle()">toggle</button>
+    <button onclick="div_fadeout()">fadeout</button>
+    <button onclick="div_fadein()">fadein</button>
+    <button onclick="div_fadetoggle()">fadetoggle</button>
+    <button onclick="div_fadeto()">fadeto</button>
+    <button onclick="div_slideup()">slideup</button>
+    <button onclick="div_slidedown()">slidedown</button>
+    <button onclick="div_slidetoggle()">slidetoggle</button>
+    <button onclick="test_callback()">callback 테스트</button>
+</body>
+</html>

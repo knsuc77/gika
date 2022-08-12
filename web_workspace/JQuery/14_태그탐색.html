@@ -29,6 +29,13 @@
       // 같은계층 태그 탐색
       // siblings : 선택된 태그와 같은계층의 모든 태그들 선택
       // siblings(선택자2) : 모든 태그중 선택자2에 해당하는 태그 선택
+      // next : 선택된 태그 다음태그가 선택
+      // nextAll : 선택된 태그 다음 태그들이 모두 선택
+      // nextUntil(선택자2) : 선택된태그 다음태그들중 선택자2까지 모든태그 선택
+      // prev :선택된 태그 이전태그가 선택
+      // prevAll : 선택된 태그 이전 태그들이 모두 선택
+      // prevUntil(선택자2) : 선택된태그 이전태그들중 선택자2까지 모든태그 선택
+
       $(function(){
         $("#a1").parent().css("border-color", "red");
         $("#a1").parents().css("border-width", "4px");
@@ -39,8 +46,17 @@
         $("#a2").children(".c3").css("border-width", "4px");
         $("#a2").find(".c5").css("border-style", "dotted");
 
-        $("#s1").siblings().css("border-color", "red")
-        $("#s1").siblings(".b2").css("border-style", "dotted")
+        // $("#s1").siblings().css("border-color", "red");
+        // $("#s1").siblings(".b2").css("border-style", "dotted");
+
+        // $("#s2").next().css("border-color", "red");
+        // $("#s2").nextAll().css("border-style", "dotted");
+        // $("#s2").nextUntil("#s3").css("border-width", "4px");
+
+        $("#s3").prev().css("border-color", "red");
+        $("#s3").prevAll().css("border-style", "dotted");
+        $("#s3").prevUntil("#s2").css("border-width", "4px");
+
       })
     </script>
 </head>
@@ -73,18 +89,22 @@
         </div>
       </div>
     </div>
-    <hr>
+<hr>
 
-    <div class="b1">div1</div>
-    <div class="b2">div2</div>
-    <div id="s1">div3</div>
-    <div class="b1">div4</div>
-    <div class="b2">div5</div>
+<div class="b1">div 1</div>
+<div class="b2">div 2</div>
+<div id="s1">div 3</div>
+<div class="b1">div 4</div>
+<div class="b2">div 5</div>
 
-    <hr>
+<hr>
 
-    <div>div1</div>
-    <div id="s2">div2</div>
+<div>div 1</div>
+<div id="s2">div 2 s2</div>
+<div>div 3</div>
+<div>div 4</div>
+<div id="s3">div 5 s3</div>
+<div>div 6</div>
 
 </body>
 </html>
