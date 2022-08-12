@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xml은 데이터를 저장하고 전달할 목적으로 만들어졌으며,
+	 저장되는 데이터의 구조를 기술하기 위한 언어 -->
+
+
+<stats>
+	<stat>
+		<lavel>1</lavel>
+		<hp>100</hp>
+		<attack>20</attack>
+	</stat>
+	<stat>
+		<lavel>2</lavel>
+		<hp>150</hp>
+		<attack>25</attack>
+	</stat>
+	<stat>
+		<lavel>3</lavel>
+		<hp>200</hp>
+		<attack>30</attack>
+	</stat>
+</stats>

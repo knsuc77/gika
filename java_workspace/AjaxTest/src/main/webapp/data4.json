@@ -1,0 +1,19 @@
+{
+	"stat" : [
+	{
+		"level" : 1,
+		"hp" : 100,
+		"attack" : 20
+	},
+	{
+		"level" : 2,
+		"hp" : 150,
+		"attack" : 25
+	},
+	{
+		"level" : 4,
+		"hp" : 200,
+		"attack" : 30
+	}
+	]
+}

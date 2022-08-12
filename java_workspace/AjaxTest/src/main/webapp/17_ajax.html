@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<title>Ajax</title>
+<script>
+// Ajax 
+// Ajax 통신은 서버와 통신시 서버로 부터 받은 응답결과를 
+// 웹브라우저에 반영하지 않고 JavaScript로 처리할 수 있도록
+// 고안된 통신 방식
+
+   function getText(){
+   $.ajax({
+      url : "data1.txt",
+      type : "post",
+      dataType : "text",
+      success : function(result){
+         $("#result").text(result);
+      }
+   });
+}
+
+   function getHtml(){
+      $.ajax({
+         url : "data2.html",
+         type : "post",
+         dataType : "html",
+         success : function(result){
+            $("#result").html(result);
+         }
+      });
+   }
+
+   function getXml(){
+      $.ajax({
+         url : "data3.xml",
+         type : "post",
+         dataType : "xml",
+         success : function(result){
+            var data = $(result).find("stat");
+            
+            $(data).each(function(i, obj){
+               var level = $(obj).find("level").text();
+               var hp = $(obj).find("hp").text();
+               var attack = $(obj).find("attack").text();
+               
+               $("#result").append("level : " + level + "<br>");
+               $("#result").append("hp : " + hp + "<br>");
+               $("#result").append("attack : " + attack + "<br>");      
+            })
+         }
+      });
+   }
+
+   // JSON : JavaScript Object Notation
+   // 데이터를 교환하고 저장하기 위하여 만들어진
+   // 텍스트 기반의 데이터 교환 표준
+   
+   function getJson(){
+      $.ajax({
+         url : "data4.json",
+         type : "post",
+         dataType : "json",
+         success : function(result){
+            $(result.stat).each(function(i, obj){
+               $("#result").append("level : " + obj.level + "<br>");
+               $("#result").append("hp : " + obj.hp + "<br>");
+               $("#result").append("attack : " + obj.attack + "<br>");
+            })
+         }
+      });
+   }
+   
+   
+</script>
+</head>
+<body>
+   <div id="result"></div>
+   <button onclick="getText()">문자열 데이터</button>
+   <button onclick="getHtml()">Html 데이터</button>
+   <button onclick="getXml()">Xml 데이터</button>
+   <button onclick="getJson()">Json 데이터</button>
+   
+</body>
+</html>
+
+
